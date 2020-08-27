@@ -21,7 +21,15 @@ public class Account {
             System.out.println(name + "has £" + balance);
         }
         else {
-            System.out.println("Withdrawal by " + name + " fails");
+            System.out.println("Withdrawal by " + name + " not possible");
+        }
+    }
+    public void transfer(double amount, Account acc) {
+        if (this.balance < amount) {
+            System.out.println("Transfer failed");
+        }
+        else {
+            this.balance -= amount;
         }
     }
 }
