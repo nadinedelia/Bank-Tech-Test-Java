@@ -15,4 +15,13 @@ public class Account {
         balance += amount;
         System.out.println(name + " has £" + balance);
     }
+    public void withdraw(double amount) {
+        if (amount < balance) {
+            balance -= amount;
+            System.out.println(name + "has £" + balance);
+        }
+        else {
+            System.out.println("Withdrawal by " + name + " fails");
+        }
+    }
 }
