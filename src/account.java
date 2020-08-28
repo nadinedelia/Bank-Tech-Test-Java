@@ -30,6 +30,9 @@ public class Account {
         }
         else {
             this.balance -= amount;
+            acc.balance += amount;
+            System.out.println("New balance of " + this.name + ": £" + this.balance);
+            System.out.println("New balance of " + acc.name + ": £" + acc.balance);
         }
     }
 }
